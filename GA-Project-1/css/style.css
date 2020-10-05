@@ -1,0 +1,197 @@
+/*
+to add:
+start game button
+wager button
+wager text box
+controls textbox
+players current money
+*/
+
+
+
+body{
+
+}
+h1 {
+  text-align: center;
+}
+#race-board{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* margin-top: ; */
+  float: left;
+  width: 70%;
+  position: relative;
+  margin-top: 120px
+}
+img {
+  height: auto;
+  width: 70%;
+  position: absolute;
+  z-index: -1;
+}
+#race-course {
+  display: inline-block;
+  width: auto; height: auto;
+  overflow: visible;
+  visibility: visible;
+  display: grid;
+  grid-template-columns: repeat(18, 0fr);
+  grid-template-rows: repeat(15, 0fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  align-self: center;
+  transform:rotate(-45deg);
+}
+
+.square {
+  display: inline-block;
+  border: 1px solid black;
+  width: 18px; height: 18px;
+  cursor: pointer;
+}
+
+#modal {
+	background-color: rgba(0,0,0,0.4);
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 1;
+	/*This puts our modal in front of the body (which has a default z-index setting of `0`*/
+	overflow: auto;
+	/*If overflow is clipped, a scroll-bar should be added to see the rest of the content*/
+  display: none;
+}
+#modal-textbox {
+	background-color: white;
+	height: 350px;
+	width: 550px;
+	border-radius: 2px;
+  margin: 150px auto;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  padding: 2%;
+  line-height: 120%;
+  font: Arial;
+}
+#modal-footer {
+  text-align: right;
+}
+.modal-buttons {
+	padding: 14px 18px;
+	background-color: orange;
+	border: none;
+	outline: none;
+	border-radius: 3px;
+	color: white;
+	font-family: 'Arial';
+	cursor: pointer;
+}
+#player-selection-modal {
+	background-color: rgba(0,0,0,0.4);
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 1;
+	/*This puts our modal in front of the body (which has a default z-index setting of `0`*/
+	overflow: auto;
+	/*If overflow is clipped, a scroll-bar should be added to see the rest of the content*/
+  display: none;
+}
+#player-two-selection-modal {
+	background-color: rgba(0,0,0,0.4);
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 1;
+	/*This puts our modal in front of the body (which has a default z-index setting of `0`*/
+	overflow: auto;
+	/*If overflow is clipped, a scroll-bar should be added to see the rest of the content*/
+  display: none;
+}
+#player-selection {
+	background-color: white;
+	height: 200px;
+	width: 350px;
+	border-radius: 2px;
+  margin: 150px auto;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  padding: 2%;
+  line-height: 120%;
+  font: Arial;
+}
+#player-two-selection {
+	background-color: white;
+	height: 200px;
+	width: 350px;
+	border-radius: 2px;
+  margin: 150px auto;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  padding: 2%;
+  line-height: 120%;
+  font: Arial;
+}
+.player-buttons:hover{
+  background-color: blue;
+}
+.player-buttons {
+	padding: 14px 18px;
+	background-color: orange;
+	border: none;
+	outline: none;
+	border-radius: 3px;
+	color: white;
+	font-family: 'Arial';
+	cursor: pointer;
+  justify-content: space-evenly;
+
+}
+#player-one-side{
+  float: left;
+  width: 15%;
+}
+#player-two-side{
+  float: left;
+  width: 15%;
+}
+#start-game-modal{
+  height: 100px;
+  width: 150px;
+  float: right;
+}
+#ketchup{
+  background-color: red;
+  display: inline-block;
+  border: 1px solid black;
+  width: 18px; height: 18px;
+  cursor: pointer;
+}
+#mustard{
+  background-color: yellow;
+  display: inline-block;
+  border: 1px solid black;
+  width: 18px; height: 18px;
+  cursor: pointer;
+}
+#relish{
+  background-color: green;
+  display: inline-block;
+  border: 1px solid black;
+  width: 18px; height: 18px;
+  cursor: pointer;
+}
+/* .player-two-buttons {
+	padding: 14px 18px;
+	background-color: orange;
+	border: none;
+	outline: none;
+	border-radius: 3px;
+	color: white;
+	font-family: 'Arial';
+	cursor: pointer; */
