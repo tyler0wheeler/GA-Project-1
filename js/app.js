@@ -165,11 +165,11 @@ let playerThree = {
           }
         }
       }
-const computerStart = () =>{
-  if(run){
-    setInterval(playerThree.computerHandler, 2000)
-  }
-}
+// const computerStart = () =>{
+//   if(run){
+//     setInterval(playerThree.computerHandler, 2000)
+//   }
+// }
 
 // Correct player movement code!!!!!!!=======================================//
 // const playerOneControls = (target) =>{
