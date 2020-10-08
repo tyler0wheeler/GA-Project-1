@@ -14,6 +14,7 @@ body{
 }
 h1 {
   text-align: center;
+  margin-top: 0px
 }
 #race-board{
   display: flex;
@@ -23,7 +24,7 @@ h1 {
   float: left;
   width: 70%;
   position: relative;
-  margin-top: 120px
+  margin-top: 150px
 }
 img {
   height: auto;
@@ -31,8 +32,14 @@ img {
   position: absolute;
   z-index: -1;
 }
+#background-image{
+  height: 100%;
+  width: 100%;
+  z-index: -2;
+  object-fit: fill;
+}
 #race-course {
-  display: inline-block;
+  display: flex;
   width: auto; height: auto;
   overflow: visible;
   visibility: visible;
@@ -43,12 +50,40 @@ img {
   grid-row-gap: 0px;
   align-self: center;
   transform:rotate(-45deg);
+  position: absolute;
+}
+#annoucement-box{
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+  border-radius: 2px;
+  margin: 150px auto;
+  /* box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2); */
+  padding: 2%;
+  line-height: 120%;
+  font: Arial;
+  align-self: center;
+  z-index: 0;
+  position: relative;
+  font-size: 25px;
+  text-align: center;
+  font: Arial;
+}
+#ketchup-image{
+  width: 5px; height: 5px;
+  object-fit: contain;
+}
+#mustard-image{
+  width: 18px; height: 18px;
+}
+#relish-image{
+  width: 18px; height: 18px;
 }
 
 .square {
   display: inline-block;
   border: 1px solid black;
-  width: 18px; height: 18px;
+  width: 23px; height: 23px;
   cursor: pointer;
 }
 
@@ -117,8 +152,8 @@ img {
 }
 #player-selection {
 	background-color: white;
-	height: 200px;
-	width: 350px;
+	height: auto;
+	width: 450px;
 	border-radius: 2px;
   margin: 150px auto;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
@@ -128,8 +163,8 @@ img {
 }
 #player-two-selection {
 	background-color: white;
-	height: 200px;
-	width: 350px;
+	height: auto;
+	width: 450px;
 	border-radius: 2px;
   margin: 150px auto;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
@@ -137,7 +172,30 @@ img {
   line-height: 120%;
   font: Arial;
 }
-.player-buttons:hover{
+#ketchup-select:hover{
+  background-color: red;
+}
+#mustard-select:hover{
+  background-color: yellow;
+  color: blue;
+}
+#relish-select:hover{
+  background-color: lime;
+}
+#ketchup-two-select:hover{
+  background-color: red;
+}
+#mustard-two-select:hover{
+  background-color: yellow;
+  color: blue;
+}
+#relish-two-select:hover{
+  background-color: lime;
+}
+/* .player-buttons:hover{
+  background-color: blue;
+} */
+.player-two-buttons:hover{
   background-color: blue;
 }
 .player-buttons {
@@ -150,43 +208,8 @@ img {
 	font-family: 'Arial';
 	cursor: pointer;
   justify-content: space-evenly;
-
 }
-#player-one-side{
-  float: left;
-  width: 15%;
-}
-#player-two-side{
-  float: left;
-  width: 15%;
-}
-#start-game-modal{
-  height: 100px;
-  width: 150px;
-  float: right;
-}
-#ketchup{
-  background-color: red;
-  display: inline-block;
-  border: 1px solid black;
-  width: 18px; height: 18px;
-  cursor: pointer;
-}
-#mustard{
-  background-color: yellow;
-  display: inline-block;
-  border: 1px solid black;
-  width: 18px; height: 18px;
-  cursor: pointer;
-}
-#relish{
-  background-color: green;
-  display: inline-block;
-  border: 1px solid black;
-  width: 18px; height: 18px;
-  cursor: pointer;
-}
-/* .player-two-buttons {
+.player-two-buttons {
 	padding: 14px 18px;
 	background-color: orange;
 	border: none;
@@ -194,4 +217,66 @@ img {
 	border-radius: 3px;
 	color: white;
 	font-family: 'Arial';
-	cursor: pointer; */
+	cursor: pointer;
+  justify-content: space-evenly;
+}
+.bet-buttons:hover{
+  background-color: blue;
+}
+.bet-buttons {
+	padding: 14px 18px;
+	background-color: orange;
+	border: none;
+	outline: none;
+	border-radius: 3px;
+	color: white;
+	font-family: 'Arial';
+	cursor: pointer;
+  justify-content: space-evenly;
+}
+#start-game-modal{
+    bottom: 30px;
+    width: 100%;
+    float:inherit;
+}
+#player-one-side{
+  float: left;
+  width: 15%;
+  height: 600px;
+}
+#player-one-controls{
+  margin-bottom: 10px;
+}
+#player-two-side{
+  float: left;
+  width: 15%;
+}
+#player-two-controls{
+  margin-bottom: 10px;
+}
+#start-game-modal{
+  height: 10%;
+  width: 150px;
+  float: right;
+}
+.modal-buttons:hover{
+  background-color: blue;
+}
+.player-images{
+  width: 19px;
+  height: 19px;
+}
+
+#countdown{
+  background-color: white;
+	height: 100px;
+	width: 100px;
+	border-radius: 2px;
+  margin-bottom: 10px auto;
+  margin-left: 100px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  padding: 2%;
+  line-height: 120%;
+  font: Arial;
+  display: none;
+}
