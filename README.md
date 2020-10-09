@@ -12,7 +12,10 @@ The Esskay Hotdog Race is a race between 3 condiments. Ketchup, Mustard, and Rel
 
 ## So *How* does it work?
 -----------------------
-Each player is assigned a group of 4 keys on the keyboard that they must press in a certain sequential order to advance their player in the race.  Before each race, players are prompted to place their bets as to how many hotdogs they want to wager on each round.  After the wager is placed, players hit the start button to begin the race.  At the end of the race, if either player has not lost all of their hotdogs or reached 10 total, they are prompted again to bet and race again.
+* Each player is assigned a group of 4 keys on the keyboard that they must press in a certain sequential order to advance their player in the race.  
+* Before each race, players are prompted to place their bets as to how many hotdogs they want to wager on each round.
+* After the wager is placed, players hit the start button to begin the race.
+* At the end of the race, if either player has not lost all of their hotdogs or reached 10 total, they are prompted again to bet and race again.
 
 Player One Controls | Player Two controls
 ------------------- | -------------------

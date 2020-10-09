@@ -1,17 +1,3 @@
-/*Ketchup, Mustard, Relish race game
-- A race between three characters(ketchup, mustard, and relish)
-- 1-4 players
-- Each player starts out with a certain amount of money can can wager up to the amount of money currently in
-their wallet
-- the characters will ove across the screen and race to a finish line
-- if your player wins, you win your wager, if not, you lose it
-- if a player loses all of their money they are out
-- if a player gets to a certain amount of money they win
-- alerts to pop up while the race is going as commentary on the race
-- a prompt screen in the beginning to explain the rules
-- players fill in text square with wager and then click begin to begin the race
-- welcome screen should say you are in the whatever inning of the ballgame and its time for the race
-*/
 
 /*
 Strech goals
@@ -21,11 +7,6 @@ alerts in the race.
 two players that press four keys in a certain order to be able to move
 */
 
-// Money will depend on outcome.  the endgame square will trigger an increase in money, if not, decrease
-// keystoke combo function for players
-// timer for computer moves
-// alerts tagged for game commentary, append when a square is changed
-//
 let run = true
 let playerOneBetValue = 0
 let playerTwoBetValue = 0
@@ -277,27 +258,27 @@ const restartGame = () => {
     $('.hotdog-bet').empty()
     $('.square').remove()
     $('#winner-modal').css('display', 'block')
-    $('#winner-textbox').text(`${playerOne.character} is our champion!`)
+    $('#winner-text').text(`${playerOne.character} is our champion!`)
     } else if(playerTwo.hotdogs >= 10){
       $('.hotdog-bet').empty()
       $('.square').remove()
       $('#winner-modal').css('display', 'block')
-      $('#winner-textbox').text(`${playerTwo.character} is our champion!`)
+      $('#winner-text').text(`${playerTwo.character} is our champion!`)
       } else if(playerOne.hotdogs <= 0){
         $('.hotdog-bet').empty()
         $('.square').remove()
         $('#winner-modal').css('display', 'block')
-        $('#winner-textbox').text(`${playerOne.character} is out of hotdogs! ${playerTwo.character} wins!`)
+        $('#winner-text').text(`${playerOne.character} is out of hotdogs! ${playerTwo.character} wins!`)
         } else if(playerTwo.hotdogs <= 0){
           $('.hotdog-bet').empty()
           $('.square').remove()
           $('#winner-modal').css('display', 'block')
-          $('#winner-textbox').text(`${playerTwo.character} is out of hotdogs! ${playerOne.character} wins!`)
+          $('#winner-text').text(`${playerTwo.character} is out of hotdogs! ${playerOne.character} wins!`)
         } else if(playerTwo.hotdogs <= 0 && playerOne.hotdogs <= 0){
             $('.hotdog-bet').empty()
             $('.square').remove()
             $('#winner-modal').css('display', 'block')
-            $('#winner-textbox').text(`You're both losers! ${playerThree.character} wins!`)
+            $('#winner-text').text(`You're both losers! ${playerThree.character} wins!`)
           }
 }
 // $('#restart').on('click', (event)=>{
@@ -352,9 +333,9 @@ const closeModal = () => {
   $playerTwoSelectionModal.css('display', 'none')
   $('#annoucement-box').text('Time to Place Your Bets!')
 }
-$('#restart').on('click', (event)=>{
-  location.reload(true)
-})
+// $('#restart').on('click', (event)=>{
+//   location.reload(true)
+// })
 
 const openPlayerOneSelect = () =>{
   $playerSelectionModal.css('display', 'block')
