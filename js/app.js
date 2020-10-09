@@ -19,11 +19,12 @@ let playerOne = { // something that tracks where the player is on the course
   removeTurnCounter: -1,
   pattern: ['a', 's', 'd', 'w'],
   exclude: ['j', 'k', 'l', 'i'], //test in pattern but not the current one
+  excludeTwo: ['k', 'l', 'i', 'j'],
   current: 0,
   keyHandler: (event) =>{
     let path = [$('#272'), $('#273'), $('#274'), $('#275'), $('#276'), $('#277'), $('#278'), $('#279'), $('#280'), $('#281'), $('#282'), $('#283'), $('#284'), $('#285'), $('#268'), $('#250'), $('#232'), $('#214'), $('#196'), $('#178'), $('#160'), $('#142'), $('#124'), $('#106'), $('#88'), $('#70'), $('#51'), $('#32'), $('#31'), $('#30'), $('#29'), $('#28'), $('#27'), $('#26'), $('#25'), $('#24'), $('#23'), $('#22'), $('#21'), $('#38'), $('#56'), $('#74'), $('#92'), $('#110'), $('#128'), $('#146'), $('#164'), $('#182'), $('#200'), $('#218'), $('#236'), $('#254'), $('#271')];
     if(run){
-      if(playerOne.exclude.indexOf(event.key) > 0){
+      if(playerOne.exclude.indexOf(event.key) > 0 || playerOne.excludeTwo.indexOf(event.key) > 0){
         return null
       }
       if (playerOne.pattern.indexOf(event.key) < 0 || event.key !== playerOne.pattern[playerOne.current]) {
@@ -96,10 +97,11 @@ let playerTwo = {
   removeTurnCounter: -1,
   pattern: ['j', 'k', 'l', 'i'],
   exclude: ['a', 's', 'd', 'w'],
+  excludeTwo: ['s', 'd', 'w', 'a'],
   current: 0,
   keyHandler: (event) =>{
     let path = [$('#290'), $('#291'), $('#292'), $('#293'), $('#294'), $('#295'), $('#296'), $('#297'), $('#298'), $('#299'), $('#300'), $('#301'), $('#302'), $('#285'), $('#267'), $('#249'), $('#231'), $('#213'), $('#195'), $('#177'), $('#159'), $('#141'), $('#123'), $('#105'), $('#87'), $('#69'), $('#51'), $('#50'), $('#49'), $('#48'), $('#47'), $('#46'), $('#45'), $('#44'), $('#43'), $('#42'), $('#41'), $('#40'), $('#39'), $('#38'), $('#55'), $('#73'), $('#91'), $('#109'), $('#127'), $('#145'), $('#163'), $('#181'), $('#199'), $('#217'), $('#235'), $('#253'), $('#271')];
-    if(playerTwo.exclude.indexOf(event.key) > 0){
+    if(playerTwo.exclude.indexOf(event.key) > 0 || playerTwo.exclude.indexOf(event.key) > 0){
       return null
     }
       if (playerTwo.pattern.indexOf(event.key) < 0 || event.key !== playerTwo.pattern[playerTwo.current]) {
@@ -146,36 +148,7 @@ let playerThree = {
           }
         }
       }
-// const computerStart = () =>{
-//   if(run){
-//     setInterval(playerThree.computerHandler, 2000)
-//   }
-// }
 
-// Correct player movement code!!!!!!!=======================================//
-// const playerOneControls = (target) =>{
-// let pattern = ['a', 's', 'd', 'w']
-// let current = 0
-// // let charListOne =  'jkli'
-// // const key = event.key.toLowerCase()
-//
-// const keyHandler = (event) => {
-//
-// 	if (pattern.indexOf(event.key) < 0 || event.key !== pattern[current]) {
-// 		current = 0;
-// 		return;
-// 	}
-//   current++
-//   if (pattern.length === current) {
-// 		current = 0;
-//   target.css('background-color', playerOne.color)
-//
-// 	}
-// 	console.log(event.key);
-// };
-// // document.addEventListener('keydown', keyHandler, false);
-// $().on('keydown', keyHandler, false);
-// }
 const playerThreeDefault = () =>{
   if (playerOne.color == 'red' && playerTwo.color == 'lime'){
     playerThree.character = 'Mustard'
@@ -281,9 +254,6 @@ const restartGame = () => {
             $('#winner-text').text(`You're both losers! ${playerThree.character} wins!`)
           }
 }
-// $('#restart').on('click', (event)=>{
-//   location.reload(true)
-// })
 
 const playerOneBetList = () =>{
   $('#player-one-textbox').val('')
@@ -333,9 +303,6 @@ const closeModal = () => {
   $playerTwoSelectionModal.css('display', 'none')
   $('#annoucement-box').text('Time to Place Your Bets!')
 }
-// $('#restart').on('click', (event)=>{
-//   location.reload(true)
-// })
 
 const openPlayerOneSelect = () =>{
   $playerSelectionModal.css('display', 'block')
