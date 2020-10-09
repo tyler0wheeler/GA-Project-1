@@ -3,6 +3,8 @@ body{
 font-family: 'Playball', cursive;
 background: rgb(222,158,24);
 background: linear-gradient(180deg, rgba(222,158,24,1) 0%, rgba(255,166,37,1) 11%, rgba(74,59,5,1) 100%);
+height: 825px;
+width: 1340px;
 }
 h1 {
   text-align: center;
@@ -289,12 +291,12 @@ img {
 }
 #winner-textbox {
   background-color: white;
-	height: 150px;
-	width: 135px;
+	height: 222px;
+	width: 141px;
 	border-radius: 2px;
   margin: 150px auto;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
-  padding: 3%;
+  padding: 2%;
   line-height: 120%;
   font-family: 'Lato', sans-serif;
   text-align: center;
