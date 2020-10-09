@@ -41,4 +41,4 @@ I'm glad you asked!  I hope to be able to add characters instead of colors for c
 
 ### A _BIG_ Thank You
 --------------------
-I also wanted to acknowledge all of my General Assembly instructors and classmates who have helped me along the way. You are all a big part of building of this game and I would remiss not to say thanks for all of your advice and feedback during this process. You the real MVP.
+I also wanted to acknowledge all of my General Assembly instructors and classmates who have helped me along the way. You are all a big part of building of this game and I would be remiss if I did not say thank you for all of your advice and feedback during this process. You the real MVP.
