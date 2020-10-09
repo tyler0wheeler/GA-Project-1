@@ -49,30 +49,7 @@ let playerOne = { // something that tracks where the player is on the course
             $('#annoucement-box').text(`${playerOne.character} wins ${playerOneBetValue} hotdog(s)!`)
             run = false
             restartGame()
-
           }
-            else if(playerTwo.turnCounter >= 52){
-              playerOne.hotdogs -= playerOneBetValue
-              playerTwo.hotdogs += playerTwoBetValue
-              console.log(playerOne.hotdogs)
-              console.log(playerTwo.hotdogs)
-              $('#player-one-hotdogs').text(`Hotdog Counter: ${playerOne.hotdogs}`)
-              $('#player-two-hotdogs').text(`Hotdog Counter: ${playerTwo.hotdogs}`)
-              $('#annoucement-box').text(`${playerTwo.character} wins ${playerTwoBetValue} hotdog(s)!`)
-              run = false
-              restartGame()
-            }
-              else if(playerThree.turnCounter >= 55){
-                playerOne.hotdogs -= playerOneBetValue
-                playerTwo.hotdogs -= playerTwoBetValue
-                console.log(playerOne.hotdogs)
-                console.log(playerTwo.hotdogs)
-                $('#player-one-hotdogs').text(`Hotdog Counter: ${playerOne.hotdogs}`)
-                $('#player-two-hotdogs').text(`Hotdog Counter: ${playerTwo.hotdogs}`)
-                $('#annoucement-box').text(`You both lose!`)
-                run = false
-                restartGame()
-              }
                 if (playerOne.turnCounter == 15 ){
                   $('#annoucement-box').text(`${playerOne.character} is rounding 1st!`)
                 }
@@ -116,6 +93,17 @@ let playerTwo = {
           path[playerTwo.turnCounter].css("background-color", playerTwo.color)
           path[playerTwo.removeTurnCounter].css('background-color', '')
         }
+          if(playerTwo.turnCounter >= 52){
+            playerOne.hotdogs -= playerOneBetValue
+            playerTwo.hotdogs += playerTwoBetValue
+            console.log(playerOne.hotdogs)
+            console.log(playerTwo.hotdogs)
+            $('#player-one-hotdogs').text(`Hotdog Counter: ${playerOne.hotdogs}`)
+            $('#player-two-hotdogs').text(`Hotdog Counter: ${playerTwo.hotdogs}`)
+            $('#annoucement-box').text(`${playerTwo.character} wins ${playerTwoBetValue} hotdog(s)!`)
+            run = false
+            restartGame()
+          }
           if (playerTwo.turnCounter == 14){
             $('#annoucement-box').text(`${playerTwo.character} is rounding 1st!`)
           }
@@ -126,6 +114,7 @@ let playerTwo = {
                 $('#annoucement-box').text(`It's the home stretch! Who is going to be our winner?!?`)
               }
         console.log(event.key);
+        console.log(playerTwo.turnCounter)
       }
     }
 
@@ -143,9 +132,20 @@ let playerThree = {
         path[playerThree.turnCounter].css("background-color", playerThree.color)
         path[playerThree.removeTurnCounter].css('background-color', '')
       }
-         if(playerThree.turnCounter == 4){
-           $('#annoucement-box').text(`Hey! ${playerThree.character} is a cheater!`)
-          }
+        if(playerThree.turnCounter >= 55){
+          playerOne.hotdogs -= playerOneBetValue
+          playerTwo.hotdogs -= playerTwoBetValue
+          console.log(playerOne.hotdogs)
+          console.log(playerTwo.hotdogs)
+          $('#player-one-hotdogs').text(`Hotdog Counter: ${playerOne.hotdogs}`)
+          $('#player-two-hotdogs').text(`Hotdog Counter: ${playerTwo.hotdogs}`)
+          $('#annoucement-box').text(`You both lose!`)
+          run = false
+          restartGame()
+        }
+           if(playerThree.turnCounter == 4){
+             $('#annoucement-box').text(`Hey! ${playerThree.character} is a cheater!`)
+            }
         }
       }
 
@@ -195,7 +195,7 @@ const playGame = () =>{
 }
 const computerStart = () =>{
   if(run){
-    setInterval(playerThree.computerHandler, 2000)
+    setInterval(playerThree.computerHandler, 1500)
   }
 }
 

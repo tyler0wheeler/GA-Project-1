@@ -97,9 +97,10 @@ img {
 	width: 100%;
 	z-index: 1;
   display: none;
+  text-shadow: 2px 2px black;
 }
 #modal-textbox {
-	height: 350px;
+	height: 550px;
 	width: 400px;
 	border-radius: 2px;
   margin: 150px auto;
@@ -107,6 +108,7 @@ img {
   	overflow: auto;
   line-height: 120%;
   color: white;
+  text-align: center;
   font-family: 'Lato', sans-serif;
 }
 #modal-footer {
@@ -287,7 +289,7 @@ img {
 }
 #winner-textbox {
   background-color: white;
-	height: 145px;
+	height: 150px;
 	width: 135px;
 	border-radius: 2px;
   margin: 150px auto;

@@ -4,7 +4,7 @@ Project 1 of GA SEI course
 ### *Why* did I build this game?
 ------------------------------
 The times we live in today are nothing short of interesting.  COVID-19 has altered our lives in so many different ways and has taken away certain things that we love dearly.  One of those certain things for myself is going to the ball park to watch a baseball game.
-Going to a baseball game is one of my favorite summer activities.  Nothing beats a hot summer afternoon or evening spent at Oriole Park at Camden Yards.  Just give me a cold beer and some hotdogs and I am set.  Now for what the Orioles lack for in talent, the stadium experience makes up for in fun. So many in between inning activities occur that take your attention away from the fact that the Orioles are probably losing. Many fans would agree that the best between inning activity is the Esskay Hotdog Race. So i decided to create a game one could player sitting in front of the screen since we missed out on sitting at the ballpark this year.
+Going to a baseball game is one of my favorite summer time activities.  Nothing beats a hot summer afternoon or evening spent at Oriole Park at Camden Yards.  Just give me a cold beer and some hotdogs and I am set.  Now for what the Orioles lack for in talent, the stadium experience makes up for in fun. So many between inning activities occur that take your attention away from the fact that the Orioles are probably losing. Many fans would agree that the best between inning activity is the Esskay Hotdog Race. I decided to create this game that one could play sitting in front of the screen since we missed out on experiencing it at the ballpark this year.
 
 ## So *What* is this game?
 ------------------------
@@ -12,7 +12,7 @@ The Esskay Hotdog Race is a race between 3 condiments. Ketchup, Mustard, and Rel
 
 ## So *How* does it work?
 -----------------------
-* Each player is assigned a group of 4 keys on the keyboard that they must press in a certain sequential order to advance their player in the race.  
+* Each player is assigned a group of 4 keys on the keyboard that they must press in a sequential order to advance their player in the race.  
 * Before each race, players are prompted to place their bets as to how many hotdogs they want to wager on each round.
 * After the wager is placed, players hit the start button to begin the race.
 * At the end of the race, if either player has not lost all of their hotdogs or reached 10 total, they are prompted again to bet and race again.
@@ -32,8 +32,13 @@ The real bulk of the game was built with a combination of JavaScript and Jquery.
 
 ## So *What* _Problems_ did I come across?
 -----------------------------------------
-Well, the biggest problem that I faced and what still needs come tweaking are the player controls.  Since the players are using the same keyboard for the game it created a lot of listening issues that are mostly sorted out with logic.  For the most part it is functional, but I do see some problems if more than 2 keys are hit at the same time.  It has been difficult to test in the game on my own.  The sequence of the pieces across the board also presented problems but just took time mapping each individual movement.
+Well, the biggest problem that I faced were the player controls.  Since the players are using the same keyboard for the game it created a lot of listening issues that had to be sorted out with some creative logic. The sequence of the pieces moving across the board also presented problems but just took time mapping each individual movement.
+Imposing the race board on the image was also met with some resistance. It still does not function exactly the way I want it to but I think it is ok for now.  More time will yield a better product.
 
 ## *What* can we expect from this game in the Future?
 ----------------------------------------------------
-I'm glad you asked!  I hope to be able to add characters instead of colors for characters but was unable to get images to cooperate like I wanted them to when it came to sizing.
+I'm glad you asked!  I hope to be able to add characters instead of colors for characters but was unable to get images to cooperate like I wanted them to when it came to sizing.  Also I need to work on the CSS.  The sizing of the game is not exactly what I was hoping for and ran into several problems that will be corrected the more comfortable I get with CSS. They game could look better but I spent more time on the functionality of the game.  I would also like to add variable speeds for the computer player. That problem could not be solved given the code and the current format it is in.
+
+### A _BIG_ Thank You
+--------------------
+I also wanted to acknowledge all of my General Assembly instructors and classmates who have helped me along the way. You are all a big part of building of this game and I would remiss not to say thanks for all of your advice and feedback during this process. You the real MVP.
