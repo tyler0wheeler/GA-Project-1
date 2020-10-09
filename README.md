@@ -10,6 +10,10 @@ Going to a baseball game is one of my favorite summer time activities.  Nothing 
 ------------------------
 The Esskay Hotdog Race is a race between 3 condiments. Ketchup, Mustard, and Relish race around the bases and the fans cheer them on as they make their way to home plate. As for this version of the game, two players pick which condiment they want to race as and run multiple races to crown the winner.  Each player starts off with 2 hotdogs and then wager how many hotdogs they stand to win or lose depending on the outcome of the race.  The third player is an automated player that races along with them.  At the end of each race, a player is awarded the hotdogs they bet if they won or deducted the hotdogs they bet if they lose.  The first player to reach 10 hotdogs is crowned the winner.  
 
+## Initial Wireframe
+--------------------
+![Wireframe](wireframe.png)
+
 ## So *How* does it work?
 -----------------------
 * Each player is assigned a group of 4 keys on the keyboard that they must press in a sequential order to advance their player in the race.  
