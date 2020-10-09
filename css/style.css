@@ -252,14 +252,14 @@ img {
 #player-one-controls{
   margin-bottom: 10px;
 }
+#player-two-controls{
+  margin-bottom: 10px;
+}
 #player-two-side{
   float: left;
   width: 15%;
   font-size: 21px;
   font-family: 'Lato', sans-serif;
-}
-#player-two-controls{
-  margin-bottom: 10px;
 }
 #start-game-modal{
   height: 10%;
