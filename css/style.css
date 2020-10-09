@@ -15,7 +15,7 @@ h1 {
 }
 #background-image{
   z-index: -1;
-  display:
+  /* display: */
   height: 1230px;
   width: 850px;
 }
