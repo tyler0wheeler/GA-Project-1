@@ -10,7 +10,7 @@ two players that press four keys in a certain order to be able to move
 let run = true
 let playerOneBetValue = 0
 let playerTwoBetValue = 0
-let playerOne = { // something that tracks where the player is on the course
+const playerOne = { // something that tracks where the player is on the course
   character:'',
   color:'',
   image:'',
@@ -66,7 +66,7 @@ let playerOne = { // something that tracks where the player is on the course
                 }
               }
 
-let playerTwo = {
+const playerTwo = {
   character:'',
   color:'',
   hotdogs: 2,
@@ -118,7 +118,7 @@ let playerTwo = {
       }
     }
 
-let playerThree = {
+const playerThree = {
   character:'',
   color:'',
   hotdogs: 2,
@@ -148,39 +148,6 @@ let playerThree = {
             }
         }
       }
-
-const playerThreeDefault = () =>{
-  if (playerOne.color == 'red' && playerTwo.color == 'lime'){
-    playerThree.character = 'Mustard'
-    playerThree.color = 'yellow'
-    $('#308').css('background-color', 'yellow')
-  }
-    else if (playerOne.color == 'red' && playerTwo.color == 'yellow'){
-      playerThree.character = 'Relish'
-      playerThree.color = 'lime'
-      $('#308').css('background-color', 'lime')
-    }
-      else if (playerOne.color == 'yellow' && playerTwo.color == 'lime'){
-        playerThree.character = 'Ketchup'
-        playerThree.color = 'red'
-        $('#308').css('background-color', 'red')
-      }
-        else if(playerOne.color == 'yellow' && playerTwo.color == 'red'){
-          playerThree.character = 'Relish'
-          playerThree.color = 'lime'
-          $('#308').css('background-color', 'lime')
-        }
-          else if(playerOne.color == 'lime' && playerTwo.color == 'yellow'){
-            playerThree.character = 'Ketchup'
-            playerThree.color = 'red'
-            $('#308').css('background-color', 'red')
-          }
-            else if(playerOne.color == 'lime' && playerTwo.color == 'red'){
-              playerThree.character = 'Mustard'
-              playerThree.color = 'yellow'
-              $('#308').css('background-color', 'yellow')
-            }
-}
 
 $(document).on('keydown', playerOne.keyHandler)
 $(document).on('keydown', playerTwo.keyHandler)
@@ -278,6 +245,40 @@ $('#player-two-bet').on('click', ()=>{
   $(event.currentTarget).trigger('reset')
   playerTwoBetList()
 })
+
+const playerThreeDefault = () =>{
+  if (playerOne.color == 'red' && playerTwo.color == 'lime'){
+    playerThree.character = 'Mustard'
+    playerThree.color = 'yellow'
+    $('#308').css('background-color', 'yellow')
+  }
+    else if (playerOne.color == 'red' && playerTwo.color == 'yellow'){
+      playerThree.character = 'Relish'
+      playerThree.color = 'lime'
+      $('#308').css('background-color', 'lime')
+    }
+      else if (playerOne.color == 'yellow' && playerTwo.color == 'lime'){
+        playerThree.character = 'Ketchup'
+        playerThree.color = 'red'
+        $('#308').css('background-color', 'red')
+      }
+        else if(playerOne.color == 'yellow' && playerTwo.color == 'red'){
+          playerThree.character = 'Relish'
+          playerThree.color = 'lime'
+          $('#308').css('background-color', 'lime')
+        }
+          else if(playerOne.color == 'lime' && playerTwo.color == 'yellow'){
+            playerThree.character = 'Ketchup'
+            playerThree.color = 'red'
+            $('#308').css('background-color', 'red')
+          }
+            else if(playerOne.color == 'lime' && playerTwo.color == 'red'){
+              playerThree.character = 'Mustard'
+              playerThree.color = 'yellow'
+              $('#308').css('background-color', 'yellow')
+            }
+}
+
 
 //beginning of game jquery
 $(() => {
