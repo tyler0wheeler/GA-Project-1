@@ -103,6 +103,7 @@ const playerTwo = {
             $('#annoucement-box').text(`${playerTwo.character} wins ${playerTwoBetValue} hotdog(s)!`)
             run = false
             restartGame()
+            
           }
           if (playerTwo.turnCounter == 14){
             $('#annoucement-box').text(`${playerTwo.character} is rounding 1st!`)
@@ -124,13 +125,15 @@ const playerThree = {
   hotdogs: 2,
   turnCounter: 0,
   removeTurnCounter: -1,
-  computerHandler: (event) =>{
+  computerHandler: () =>{
     let path = [$('#308'), $('#309'), $('#310'), $('#311'), $('#312'), $('#313'), $('#314'), $('#315'), $('#316'), $('#317'), $('#318'), $('#319'), $('#320'), $('#321'), $('#304'), $('#287'), $('#269'), $('#251'), $('#233'), $('#215'), $('#197'), $('#179'), $('#161'), $('#143'), $('#125'), $('#107'), $('#89'), $('#71'), $('#52'), $('#33'), $('#14'), $('#13'), $('#12'), $('#11'), $('#10'), $('#9'), $('#8'), $('#7'), $('#6'), $('#5'), $('#4'), $('#3'), $('#20'), $('#37'), $('#54'), $('#72'), $('#90'), $('#108'), $('#126'), $('#144'), $('#162'), $('#180'), $('#198'), $('#216'), $('#234'), $('#252'), $('#271')]
-      if(playerThree.turnCounter <= 55){
+      if(playerThree.turnCounter <= 55 && playerOne.turnCounter < 52 && playerTwo.turnCounter < 52){
         playerThree.turnCounter += 1
         playerThree.removeTurnCounter += 1
         path[playerThree.turnCounter].css("background-color", playerThree.color)
         path[playerThree.removeTurnCounter].css('background-color', '')
+        console.log(playerThree.turnCounter)
+        console.log(playerOne.turnCounter);
       }
         if(playerThree.turnCounter >= 55){
           playerOne.hotdogs -= playerOneBetValue
@@ -146,6 +149,12 @@ const playerThree = {
            if(playerThree.turnCounter == 4){
              $('#annoucement-box').text(`Hey! ${playerThree.character} is a cheater!`)
             }
+              if(playerOne.turnCounter >= 52 && playerThree.turnCounter < 55){
+                return null
+              }
+              if(playerTwo.turnCounter >= 52 && playerThree.turnCounter < 55){
+                return null
+              }
         }
       }
 
@@ -162,10 +171,9 @@ const playGame = () =>{
 }
 const computerStart = () =>{
   if(run){
-    setInterval(playerThree.computerHandler, 1500)
+    setInterval(playerThree.computerHandler, 900)
   }
 }
-
 
 //============================================================================//
 
